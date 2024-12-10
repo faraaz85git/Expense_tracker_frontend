@@ -1,0 +1,35 @@
+.top-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    font-size: 2em;
+    font-weight: bolder;
+}
+button{
+    /* width: 90px;
+    height: 40px; */
+    background-color: #5a67d8;
+    color: white;
+    border: none;
+    border-radius: 9%;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+}
+button:hover{
+    background-color: #3a4be2;
+}
+div{
+
+}
+div.latest-expenses {
+  /* flex: 1; */
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ededed;
+}

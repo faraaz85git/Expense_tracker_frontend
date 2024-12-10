@@ -1,0 +1,45 @@
+@if(isFetching()){
+<p>fetching data.</p>
+} @else{ @if(openModal){
+<app-budget-create (closeModal)="toCloseModal()"></app-budget-create>
+} @else {
+<div class="budget-container">
+  <app-topbar></app-topbar>
+  <div class="budget-card-container">
+    <h2>Budget</h2>
+    <div class="card-container">
+      <div class="row-1">
+        <div class="create-budget" (click)="toOpenModal()">
+          <i class="fa-solid fa-plus fa-xl plus-icon"></i>
+        </div>
+        <app-budgetcard
+          [budget]="budgets()[0]"
+          [imagesSrc]="imagesSrc[0]"
+        ></app-budgetcard>
+        <app-budgetcard
+          [budget]="budgets()[1]"
+          [imagesSrc]="imagesSrc[1]"
+        ></app-budgetcard>
+      </div>
+      <div class="row-2">
+        <app-budgetcard
+          [budget]="budgets()[2]"
+          [imagesSrc]="imagesSrc[2]"
+        ></app-budgetcard
+        ><app-budgetcard
+          [budget]="budgets()[3]"
+          [imagesSrc]="imagesSrc[3]"
+        ></app-budgetcard
+        ><app-budgetcard
+          [budget]="budgets()[4]"
+          [imagesSrc]="imagesSrc[4]"
+        ></app-budgetcard>
+      </div>
+    </div>
+    <!-- <app-budgetcard
+      [budget]="budget"
+      [imagesSrc]="imagesSrc[i]"
+    ></app-budgetcard> -->
+  </div>
+</div>
+}}

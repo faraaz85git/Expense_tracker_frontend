@@ -1,0 +1,79 @@
+.latest-expenses {
+  margin: 20px;
+  max-width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 0px solid #ddd;
+  color: black;
+}
+
+td {
+  /* background-color: #f4f4f4; */
+  color: #565656;
+  font-weight: 550;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: rgb(210, 0, 0);
+}
+
+.delete-btn:hover {
+  color: darkred;
+}
+.edit-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #6a5bcd;
+}
+.edit-btn:hover {
+  color: #9588e7;
+}
+
+thead {
+  background-color: #dddfe7;
+}
+tbody {
+  background-color: #f4f4f7;
+}
+
+
+
+/* pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .pagination button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border: none;
+    background-color: #5a67d8;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .pagination button:disabled {
+    background-color: #cbd5e0;
+    cursor: not-allowed;
+  }
+  

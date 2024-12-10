@@ -1,0 +1,151 @@
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+}
+
+app-sidebar {
+  width: 250px;
+  background-color: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+/* scrollbar */
+.main-content::-webkit-scrollbar {
+
+ width: 3px; /*Scrollbar width */
+border-radius: 10px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: #ffffff; /* Scrollbar track color */
+border-radius: 10px;
+ }
+
+.main-content::-webkit-scrollbar-thumb {
+  background-color: #fff; /*Scrollbar thumb color */
+border-radius: 20px;
+border: 2px solid #e0e0e0; /*Adds space between thumb and track */
+} 
+
+.main-content::-webkit-scrollbar-thumb:hover {
+ background-color: #a69ddf; /* Darker shade on hover */
+} 
+
+
+/*
+app-top-bar {
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-area {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.summary-section {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ededed;
+}
+.icon {
+  flex: 1;
+}
+.card h3 {
+  font-size: small;
+  color: #565656;
+  text-align: left;
+}
+.card p {
+  font-size: 1.5rem;
+  font-weight: 750;
+  text-align: left;
+}
+.card i {
+  color: white;
+}
+
+.chart-and-budget {
+  display: flex;
+  gap: 10px;
+}
+
+.activity-section,
+.latest-budgets {
+  flex: 1;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ededed;
+
+} */
+
+/* .latest-info-section {
+  /* display: flex;
+  gap: 1rem; */
+/* } */
+
+/* .latest-expenses { */
+/* flex: 1; */
+/* background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ededed;
+} */
+
+/* scrollbar */
+/* .main-content::-webkit-scrollbar { */
+
+/* width: 3px; Scrollbar width */
+/* border-radius: 10px; */
+/* } */
+
+/* .main-content::-webkit-scrollbar-track {
+  background: #ffffff; /* Scrollbar track color */
+/* border-radius: 10px; */
+/* } */
+
+/* .main-content::-webkit-scrollbar-thumb {
+  background-color: #fff; Scrollbar thumb color */
+/* border-radius: 20px; */
+/* border: 2px solid #e0e0e0; Adds space between thumb and track */
+/* } */
+
+/* .main-content::-webkit-scrollbar-thumb:hover { */
+/* background-color: #a69ddf; /* Darker shade on hover */
+/* }  */
+
+/* .icons{
+  height: 47px;
+  width: 47px;
+  background-color:#6a5bcd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ border-radius: 50%;
+} */

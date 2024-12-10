@@ -1,0 +1,54 @@
+<app-topbar></app-topbar>
+
+<div class="content-area">
+  <!-- Summary Component -->
+  <div class="summary-section">
+    <div class="card total-budget">
+      <div>
+        <h3>Total Budget</h3>
+        <p>${{totalBudget()}}</p>
+      </div>
+      <div class="icons">
+        <i class="fa-solid fa-piggy-bank  icon fa-xl"></i>
+      </div>
+    </div>
+    <div class="card total-spend">
+      <div>
+        <h3>Total Spend</h3>
+        <p>${{budgetSpend()}}</p>
+      </div>
+      <div class="icons">
+        <i class="fa-list-check fa-solid fa-xl"></i>
+      </div>
+    </div>
+    <div class="card number-of-budgets">
+      <div>
+        <h3>No. of Budget</h3>
+        <p>5</p>
+      </div>
+      <div class="icons">
+        <i class="fa-solid fa-wallet fa-xl"> </i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chart Section -->
+  <div class="chart-and-budget">
+    <div class="activity-section">
+      <h3>Activity</h3>
+      <app-barchart></app-barchart>
+    </div>
+    <div class="latest-budgets">
+      <h3>Latest Budgets</h3>
+      <app-budgetslist></app-budgetslist>
+    </div>
+  </div>
+
+  <!-- Latest Budgets and Expenses -->
+  <div class="latest-info-section">
+    <div class="latest-expenses">
+      <h3>Latest Expenses</h3>
+      <app-expenseslist></app-expenseslist>
+    </div>
+  </div>
+</div>

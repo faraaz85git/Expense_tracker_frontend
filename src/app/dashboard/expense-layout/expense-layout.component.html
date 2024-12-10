@@ -1,0 +1,22 @@
+@if(isOpenModal){
+<app-create-expense-modal
+  (updateList)="toUpdateList()"
+  (closeModal)="toCloseModal()"
+></app-create-expense-modal>
+}
+
+<div class="latest-info-section">
+  <div class="top-bar">
+    <div class="heading">My Expenses</div>
+    <div class="add-expense">
+      <button (click)="toOpenModal()">
+        <i class="fa-solid fa-pen-to-square"></i>
+        New
+      </button>
+    </div>
+  </div>
+  <div class="latest-expenses">
+    <h3>Latest Expenses</h3>
+    <app-expenseslist [toRefresh]="toRefresh"></app-expenseslist>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="budget-card">
+    <div class="budget-info">
+      <div class="budget-category-info">
+        <div class="budget-icon">
+          <!-- <i class="fa-solid fa-list-check"></i> -->
+          <img width="30" height="30" [src]="imagesSrc" alt="shop-local"/>
+        </div>
+        <div class="budget-name">
+          <h4>{{ budget.name }}</h4>
+          <p>{{ budget.items }} Item{{ budget.items > 1 ? "s" : "" }}</p>
+        </div>
+      </div>
+      <h3>${{ budget.total }}</h3>
+    </div>
+    <div class="budget-dates">
+     <p>{{budget.start_date}}</p>
+     <p>-to-</p>
+     <p>{{budget.end_date}}</p>
+    </div>
+    <div class="budget-details">
+      <p>${{ budget.spent }} Spent</p>
+      <p>${{ budget.remaining }} Remaining</p>
+    </div>
+    <div class="progress-bar">
+      <div
+        class="spent-bar"
+        [style.width.%]="(budget.spent / budget.total) * 100"
+      ></div>
+    </div>
+  </div>

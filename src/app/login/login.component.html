@@ -1,0 +1,55 @@
+<div class="landing-page">
+  <div class="image-container">
+    <img
+      src="https://www.arkasoftwares.com/blog/wp-content/uploads/2022/04/expense-tracker-app.png"
+    />
+  </div>
+  <div class="form-container">
+    <div class="login-img">
+      <img src="rb_10808.png" alt="" />
+    </div>
+
+    <form action="" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="logo">
+        <a routerLink="/dashboard" routerLinkActive="active" class="brand-logo">
+          <i class="fa-solid fa-circle-dollar-to-slot fa-xl icon-brand"></i>
+          TrackWise
+        </a>
+      </div>
+      <div>
+        <label for="username">Username</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          (input)="onInputData()"
+          [formControl]="form.controls.userName"
+        />
+        @if (isInvalidUsername) {
+        <p>Username required</p>
+        }
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          [formControl]="form.controls.password"
+        />
+        @if (isInvalidPassword) {
+        <p>password required</p>
+        }
+        @if(!isValidCredential()){
+          <p>Invalid Credentials</p>
+        }
+      </div>
+      <h5>Don't have account? <a [routerLink]="'/signup'">Sign in</a></h5>
+      <div>
+        <button type="submit" [disabled]="form.dirty && form.invalid">
+          Login
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

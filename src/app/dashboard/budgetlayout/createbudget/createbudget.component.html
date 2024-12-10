@@ -1,0 +1,75 @@
+<div class="modal-container" >
+<div class="modal-backdrop" (click)="toCloseModal()">
+
+</div>
+<div class="modal-content">
+  <h2>Create New Budget</h2>
+  <form [formGroup]="form" (ngSubmit)="onSubmitBudgetForm()">
+    <div>
+      <label for="housing">Housing</label>
+      <input type="text" id="housing" formControlName="housing" />
+      @if(form.controls.housing.dirty&&form.controls.housing.invalid){
+      <p>Budget should be greater than or equal to 0</p>
+      }
+    </div>
+
+    <div>
+      <label for="food">Food</label>
+      <input type="text" id="food" formControlName="food" />
+      @if(form.controls.food.dirty&&form.controls.food.invalid){
+        <p>Budget should be greater than or equal to 0</p>
+        }    
+    </div>
+
+    <div>
+      <label for="clothing">Clothing</label>
+      <input type="text" id="clothing" formControlName="clothing" />
+      @if(form.controls.clothing.dirty&&form.controls.clothing.invalid){
+        <p>Budget should be greater than or equal to 0</p>
+        }
+    </div>
+
+    <div>
+      <label for="other">Other</label>
+      <input type="text" id="other" formControlName="other" />
+      @if(form.controls.other.dirty&&form.controls.other.invalid){
+        <p>Budget should be greater than or equal to 0</p>
+        }
+    </div>
+
+    <div>
+      <label for="transport">Transport</label>
+      <input type="text" id="transport" formControlName="transport" />
+    
+      @if(form.controls.transport.dirty&&form.controls.transport.invalid){
+        <p>Budget should be greater than or equal to 0</p>
+        }</div>
+
+    <div>
+      <label for="startDate">Start Date</label>
+      <input type="date" id="startDate" formControlName="startDate" />
+      @if(form.controls.startDate.dirty&&form.controls.startDate.invalid){
+        <p>Invalid date</p>
+        }
+    </div>
+
+    <div>
+      <label for="endDate">End Date</label>
+      <input type="date" id="endDate" formControlName="endDate" />
+      @if(form.controls.endDate.dirty&&form.controls.endDate.invalid){
+        <p>Invalid date</p>
+        }
+    </div>
+    @if(form.dirty&&form.invalid&&!isDatesInValid){
+      <p>Invalid budget data</p>
+      }
+    @else if(form.controls.startDate.touched&&isDatesInValid){
+      <p>End date should be greater than start date</p>
+    }
+   
+    <div>
+      <button type="submit" [disabled]="form.invalid" >Submit</button>
+    </div>
+  </form>
+</div>
+</div>

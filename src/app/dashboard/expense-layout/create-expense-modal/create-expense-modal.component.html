@@ -1,0 +1,54 @@
+<div class="modal-container">
+  <div class="modal-backdrop" (click)="toCloseModal()"></div>
+  <div class="modal-content">
+    <h2>{{ title }}</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmitExpenseForm()">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" formControlName="name" />
+        @if(form.controls.name.dirty&&form.controls.name.invalid){
+        <p>Invalid name</p>
+        }
+      </div>
+
+      <div>
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" formControlName="amount" />
+        @if(form.controls.amount.dirty&&form.controls.amount.invalid){
+        <p>Amount should be greater than or equal to 0</p>
+        }
+      </div>
+
+      <div>
+        <label for="category">Category</label>
+        <select name="category" id="category" formControlName="category">
+          <option value="housing">Housing</option>
+          <option value="clothing">Clothing</option>
+          <option value="food">Food</option>
+          <option value="other" selected>Other</option>
+          <option value="transport">Transport</option>
+        </select>
+        <!-- <input type="text" id="category" formControlName="category" />
+        @if(form.controls.category.dirty&&form.controls.category.invalid){
+        <p>Budget should be greater than or equal to 0</p>
+        } -->
+      </div>
+
+      <div>
+        <label for="date">Date</label>
+        <input type="date" id="date" formControlName="date" />
+        @if(form.controls.date.dirty&&form.controls.date.invalid){
+        <p>Budget should be greater than or equal to 0</p>
+        }
+      </div>
+
+      @if(form.dirty&&form.invalid){
+      <p>Invalid budget data</p>
+      } 
+      <div>
+        <button type="submit" [disabled]="form.invalid">Save</button>
+      </div>
+      
+    </form>
+  </div>
+</div>

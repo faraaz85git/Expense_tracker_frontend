@@ -1,0 +1,49 @@
+.budget-container {
+  padding: 24px;
+}
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.row-1,
+.row-2 {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+app-budgetcard {
+  flex: 1;
+}
+
+.create-budget {
+  flex: 1;
+  display: flex;
+  border-width: 1px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1.5px dotted #565656;
+  background-color: #ecebeb;
+}
+div.create-budget:hover{
+    background-color: #dcdcdc;
+}
+app-topbar {
+  padding: 0;
+}
+h2 {
+  margin-bottom: 15px;
+}
+.plus-icon{
+  color: #565656;
+  
+}
+.budget-card-container {
+  padding: 48px 0;
+}

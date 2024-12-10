@@ -1,0 +1,10 @@
+:host{
+    padding: 24px;
+}
+
+h1{
+    font-weight: bolder;
+}
+p{
+    color: #565656;
+}

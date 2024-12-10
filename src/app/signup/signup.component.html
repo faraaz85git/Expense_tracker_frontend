@@ -1,0 +1,76 @@
+<div class="sign-up-page">
+  <div class="image-container">
+    <img
+      src="https://www.arkasoftwares.com/blog/wp-content/uploads/2022/04/expense-tracker-app.png"
+    />
+  </div>
+  <div class="form-container">
+    <div class="login-img">
+      <img src="rb_10808.png" alt="" />
+    </div>
+  <form action="" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="logo">
+      <a routerLink="/dashboard" routerLinkActive="active" class="brand-logo">
+        <i class="fa-solid fa-circle-dollar-to-slot fa-xl icon-brand"></i>
+        TrackWise
+      </a>
+    </div>
+    <div class="username">
+      <label for="signup-username">Username</label>
+      <input
+        type="text"
+        name="username"
+        id="signup-username"
+        [formControl]="form.controls.username"
+        (input)="onChangeUsername()"
+      />
+      @if(isUsernameInValid){
+      <p class="invalid">
+        Username must contain atleast one lowercase letter and number
+      </p>
+      }
+    </div>
+    <div class="password">
+      <label for="signup-password">Password</label>
+      <input
+        type="password"
+        name="password"
+        id="signup-password"
+        [formControl]="form.controls.password"
+      />
+      @if(isPasswordInValid){
+      <p class="invalid">Password must contain atleast 10 number</p>
+      }
+    </div>
+    <div class="confm-password">
+      <label for="confm-password">Confirm Password</label>
+      <input
+        type="password"
+        name="confm-password"
+        id="confm-password"
+        [formControl]="form.controls.confirmPassword"
+      />
+      @if(isConfirmPasswordInValid){
+      <p class="invalid">Password must contain atleast 10 number</p>
+      } @else if(!isPasswordSame){
+      <p class="invalid">Password don't match</p>
+      }
+    </div>
+    <div>
+      <h5>
+        Already have an account. <a [routerLink]='"/login"'>Login</a>
+      </h5>
+    </div>
+    @if(usernameExistError()){
+    <div>
+      <p class="invalid">Username Already taken</p>
+    </div>
+    }
+    <div>
+      <button type="submit" [disabled]="form.dirty && form.invalid">
+        SignUp
+      </button>
+    </div>
+  </form>
+</div>
+</div>
