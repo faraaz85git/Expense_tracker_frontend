@@ -6,16 +6,16 @@
           <img width="30" height="30" [src]="imagesSrc" alt="shop-local"/>
         </div>
         <div class="budget-name">
-          <h4>{{ budget.name }}</h4>
+          <h4>{{ budget.name | titlecase}}</h4>
           <p>{{ budget.items }} Item{{ budget.items > 1 ? "s" : "" }}</p>
         </div>
       </div>
       <h3>${{ budget.total }}</h3>
     </div>
     <div class="budget-dates">
-     <p>{{budget.start_date}}</p>
+     <p>{{budget.start_date | date:'mediumDate'}}</p>
      <p>-to-</p>
-     <p>{{budget.end_date}}</p>
+     <p>{{budget.end_date | date:'mediumDate'}}</p>
     </div>
     <div class="budget-details">
       <p>${{ budget.spent }} Spent</p>

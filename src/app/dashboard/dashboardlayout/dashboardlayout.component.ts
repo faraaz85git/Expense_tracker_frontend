@@ -22,6 +22,7 @@ import { BudgetStatusApi } from '../../apis';
   styleUrl: './dashboardlayout.component.css',
 })
 export class DashboardLayoutComponent {
+    
     budget = signal<BudgetStatus>({
         start_date: '2024-10-19',
         end_date: '2024-12-20',
@@ -58,7 +59,6 @@ export class DashboardLayoutComponent {
           .get<BudgetStatus | BudgetExist>(BudgetStatusApi)
           .subscribe({
             next: (val) => {
-             
               if(isBudgetStatus(val)){
                 this.budget.set(val);
                 this.updateTotals(val);

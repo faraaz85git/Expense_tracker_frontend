@@ -1,10 +1,11 @@
-import { NgFor } from '@angular/common';
+import { DatePipe, NgFor, TitleCasePipe } from '@angular/common';
 import { Component, Input, input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-budgetcard',
   standalone: true,
   templateUrl: './budgetcard.component.html',
+  imports:[DatePipe,TitleCasePipe],
   styleUrl: './budgetcard.component.css',
 })
 export class BudgetCardComponent implements OnInit {

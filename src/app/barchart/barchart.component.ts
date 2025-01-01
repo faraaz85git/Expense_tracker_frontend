@@ -23,6 +23,7 @@ import { BudgetStatusApi } from '../apis';
 })
 export class BarchartComponent implements OnInit {
   isFetching = true;
+  isBudgetExist=true;
   private backendService = inject(BackendService);
   budgetAmountsArray = signal<number[]>([0, 0, 0, 0, 0]);
   amountSpendArray = signal<number[]>([0, 0, 0, 0, 0]);
@@ -73,10 +74,17 @@ export class BarchartComponent implements OnInit {
           if (isBudgetStatus(val)) {
             this.updateTotals(val);
           }
+          else{
+            this.isBudgetExist=false;
+          }
+          
         },
         error: (error) => {
           console.log(error);
         },
+        complete:()=>{
+        this.isFetching=false;
+        }
       });
   }
   ngOnDestroy() {

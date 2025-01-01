@@ -1,3 +1,10 @@
+@if(isFetching){
+    <p>fetching data...</p>
+}
+@else if (!isFetching&&!isBudgetExist) {
+    <p>No budget data</p>
+}
+@else{
 <apx-chart
 [series]="chartSeries"
 [chart]="chartDetails"
@@ -7,3 +14,4 @@
 [colors]="chartColors"
 [plotOptions]="chartPlotOptions"
 ></apx-chart>
+}
